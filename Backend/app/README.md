@@ -3,11 +3,11 @@
 
 Used Tech Stack
 
-# 1.Django
-# 2.Mysql
-# 3.GraphQl
+## 1.Django
+## 2.Mysql
+## 3.GraphQl
 
-# Running on your Machine
+## Running on your Machine
 First install requirements.txt file by the following command
 
 ```
