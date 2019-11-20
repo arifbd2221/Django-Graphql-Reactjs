@@ -19,6 +19,13 @@ Then inside setting.py edit the database credentials
   -> Provide database name
   -> Provide database username
   -> Provide database password
+  
+ ***
+ Now run the following command to sync mysql database with the migrations
+ ```
+ python manage.py makemigrations
+ python manage.py migrate
+ ```
  
  ***
  All right now you are ready to fly
