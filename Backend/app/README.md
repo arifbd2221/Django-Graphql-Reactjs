@@ -180,3 +180,83 @@ Then inside setting.py edit the database credentials
   }
 }
  ```
+ 
+ ### To update a track
+ Mutation:
+ ```
+ mutation{
+  updateTrack(trackId: 3, title: "tere mere riste", description: "shduisadhcdsccmjdjcn", url: "http://track3.com"){
+    track{
+        id
+    }
+  }
+}
+ ```
+ Result:
+ ```
+ {
+  "data": {
+    "updateTrack": {
+      "track": {
+        "id": "3"
+      }
+    }
+  }
+}
+ ```
+ 
+ ### To delete a track
+ Mutation:
+ ```
+ mutation{
+  deleteTrack(trackId: 4){
+    trackId
+  }
+}
+ ```
+ Result:
+ ```
+ {
+  "data": {
+    "deleteTrack": {
+      "trackId": 4
+    }
+  }
+}
+ ```
+### To search a track
+Query:
+```
+{
+  tracks(search: "a"){
+    title
+    description
+    url
+  }
+}
+```
+Result:
+```
+{
+  "data": {
+    "tracks": [
+      {
+        "title": "ABC",
+        "description": "asasdsdas",
+        "url": "http://track1.com"
+      },
+      {
+        "title": "LOLE",
+        "description": "asuidhoauishduiashdusd",
+        "url": "httep://track2.com"
+      },
+      {
+        "title": "tere mere riste",
+        "description": "shduisadhcdsccmjdjcn",
+        "url": "http://track3.com"
+      }
+    ]
+  }
+}
+```
+
