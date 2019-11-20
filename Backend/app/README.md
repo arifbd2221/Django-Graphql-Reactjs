@@ -36,11 +36,12 @@ Then inside setting.py edit the database credentials
 
  [goto localhost:8000/](http://127.0.0.1:8000/)
  
- 
+ ***
  ## Graphql Api Uses
+ ***
     hit [localhost:8000/graphql/](http://127.0.0.1:8000/graphql/)
     now in the graphql explorer you can perform following queries
     ### to get all the tracks list
-    
+    ***
     ![tracks]: (https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/traks.png "Tracks")
  
