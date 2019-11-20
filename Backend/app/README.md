@@ -90,16 +90,93 @@ Then inside setting.py edit the database credentials
  ```
  
  ### To create a user
- User:
- ![user](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/create-user.png "Tracks")
+ Mutation:
+ ```
+ mutation{
+  createUser(username: "test2", email: "test2@gmail.com", password: "1234567890"){
+    user{
+      id
+      username
+      email
+      dateJoined
+    }
+  }
+}
+ ```
+ 
+ Result:
+ ```
+ {
+  "data": {
+    "createUser": {
+      "user": {
+        "id": "4",
+        "username": "test2",
+        "email": "test2@gmail.com",
+        "dateJoined": "2019-11-20T08:04:55.913933+00:00"
+      }
+    }
+  }
+}
+ ```
  
  ### To get a token for a user
- Token:
- ![token](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/token.png "Token")
+ Mutation:
+ ```
+ mutation{
+  tokenAuth(username: "viki", password: "eclviki"){
+    token
+  }
+}
+ ```
+ Result:
+ ```
+ {
+  "data": {
+    "tokenAuth": {
+      "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InZpa2kiLCJleHAiOjE1NzQyMzkwMTksIm9yaWdJYXQiOjE1NzQyMzg3MTl9.zTgjpefljOq9o5TcCfyHJutZRwyvs4U89csO6PXyzqg"
+    }
+  }
+}
+ ```
  
  ### To create a Track object
  Pass token to the header Authorization properly:
  ![auth](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/auth-header.png "Auth Header")
  
- Track:
- ![track](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/create-track.png "track")
+ Mutation:
+ ```
+ mutation{
+  createTrack(title: "arabic lele", description: "ashduiashdishduisdh", url: "http://track.com"){
+    track{
+      id
+      title
+      description
+      url
+      postedBy{
+        id
+        username
+      }
+    }
+  }
+}
+ ```
+ Result: 
+ ```
+ {
+  "data": {
+    "createTrack": {
+      "track": {
+        "id": "4",
+        "title": "arabic lele",
+        "description": "ashduiashdishduisdh",
+        "url": "http://track.com",
+        "postedBy": {
+          "id": "2",
+          "username": "viki"
+        }
+      }
+    }
+  }
+}
+ ```
