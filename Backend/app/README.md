@@ -43,8 +43,51 @@ Then inside setting.py edit the database credentials
   now in the graphql explorer you can perform following queries
   ***
  ### To get all the tracks list
- Tracks:
- ![tracks](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/tracks.png "Tracks")
+ Query:
+ ```
+ {
+  tracks{
+    id
+    title
+    description
+    url
+    postedBy{
+      id
+      username
+    }
+  }
+}
+ ```
+ 
+ Result:
+ ```
+ {
+  "data": {
+    "tracks": [
+      {
+        "id": "1",
+        "title": "ABC",
+        "description": "asasdsdas",
+        "url": "http://track1.com",
+        "postedBy": {
+          "id": "1",
+          "username": "arif"
+        }
+      },
+      {
+        "id": "3",
+        "title": "tere mere riste nur",
+        "description": "ashasuohdioashdiashuoasdhcuisdhcusdicsdcasdchsdijcisdjcisdjcisdjcisdcsdkc",
+        "url": "http://res.cloudinary.com/react-graphql/raw/upload/v1574157085/ywzcf4hjt2el3izpeuye.mp3",
+        "postedBy": {
+          "id": "2",
+          "username": "viki"
+        }
+      }
+    ]
+  }
+}
+ ```
  
  ### To create a user
  User:
