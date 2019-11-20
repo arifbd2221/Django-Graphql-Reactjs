@@ -43,5 +43,5 @@ Then inside setting.py edit the database credentials
     now in the graphql explorer you can perform following queries
     ### to get all the tracks list
     ***
-    ![tracks]: (https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/traks.png "Tracks")
+    ![tracks]: (https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/tracks.png "Tracks")
  
