@@ -46,10 +46,17 @@ Then inside setting.py edit the database credentials
  Tracks:
  ![tracks](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/tracks.png "Tracks")
  
+ ### To create a user
+ User:
+ ![user](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/create-user.png "Tracks")
+ 
  ### To get a token for a user
  Token:
  ![token](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/token.png "Token")
  
  ### To create a Track object
+ Pass token to the header Authorization properly:
+ ![auth](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/auth-header.png "Auth Header")
+ 
  Track:
  ![track](https://github.com/arifbd2221/Django-Graphql-Reactjs/blob/master/Backend/app/API-Images/create-track.png "track")
