@@ -85,7 +85,7 @@ class UpdateTrack(graphene.Mutation):
     This UpdateTrack class allows you to make changes to the tracks user created.
     """
     # Graphql query parameter
-    track = graphene.Field(CreateTrack)
+    track = graphene.Field(TrackType)
 
     class Arguments:
         """
