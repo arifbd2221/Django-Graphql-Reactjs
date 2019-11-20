@@ -42,8 +42,8 @@ Please follow the following steps:
 1. Add '.env' file
 ...Create a file called '.env' at the root of the application
 2. Add environment variables to '.env' file
-...REACT_APP_GRAPHQL_API_URL=Your Project Base Url,
-...REACT_APP_CLOUD_NAME=YOUR_CLOUD_NAME,
-...REACT_APP_UPLOAD_PRESET=YOUR_PRESET_GOES_HERE,
+...REACT_APP_GRAPHQL_API_URL=Your Project Base Url
+...REACT_APP_CLOUD_NAME=YOUR_CLOUD_NAME
+...REACT_APP_UPLOAD_PRESET=YOUR_PRESET_GOES_HERE
 ...REACT_APP_CLODUNINARY_URL=YOUR_CLOUDINARY_URL
 
